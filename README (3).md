@@ -24,7 +24,13 @@ cd cassandra-docker
 ##  Run Cassandra
 
 ``` bash
-docker compose up -d
+## 4 docker compose up -d
+Check logs:
+## 5 docker logs -f cassandra1
+Wait until you see:
+
+Starting listening for CQL clients
+
 ```
 
 ##  Connect to Cassandra
