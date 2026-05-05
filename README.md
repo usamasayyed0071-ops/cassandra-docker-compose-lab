@@ -1,1 +1,0 @@
-# cassandra-docker-compose-lab
