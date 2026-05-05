@@ -17,11 +17,6 @@ cd cassandra-docker
 ```
 
 ### 2. Create .env File
-
-``` env
-CASSANDRA_CLUSTER_NAME=MyCluster
-CASSANDRA_DC=DC1
-CASSANDRA_RACK=RACK1
 ```
 
 ### 3. Create docker-compose.yml
