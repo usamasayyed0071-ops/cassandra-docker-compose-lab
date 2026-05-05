@@ -12,7 +12,7 @@ internals including Commit Log, MemTables, and SSTables.
 ### 1. Create Project Directory
 
 ``` bash
-mkdir cassandra-docker
+git clone your repo
 cd cassandra-docker
 ```
 
@@ -23,33 +23,6 @@ CASSANDRA_CLUSTER_NAME=MyCluster
 CASSANDRA_DC=DC1
 CASSANDRA_RACK=RACK1
 ```
-
-### 3. Create docker-compose.yml
-
-``` yaml
-version: '3.8'
-
-services:
-  cassandra1:
-    image: cassandra:4.1
-    container_name: cassandra1
-    env_file:
-      - .env
-    environment:
-      - MAX_HEAP_SIZE=256M
-      - HEAP_NEWSIZE=50M
-      - CASSANDRA_CLUSTER_NAME=${CASSANDRA_CLUSTER_NAME}
-      - CASSANDRA_DC=${CASSANDRA_DC}
-      - CASSANDRA_RACK=${CASSANDRA_RACK}
-    ports:
-      - "9042:9042"
-    volumes:
-      - cassandra_data:/var/lib/cassandra
-
-volumes:
-  cassandra_data:
-```
-
 
 ##  Run Cassandra
 
