@@ -1,14 +1,13 @@
-# 🚀 Cassandra Docker Compose Project
+#  Cassandra Docker Compose Project
 
-## 📌 Overview
+##  Overview
 
 This project demonstrates how to deploy Apache Cassandra using Docker
 Compose with environment variables and understand its storage engine
 internals including Commit Log, MemTables, and SSTables.
 
-------------------------------------------------------------------------
 
-## ⚙️ Setup
+##  Setup
 
 ### 1. Create Project Directory
 
@@ -51,25 +50,22 @@ volumes:
   cassandra_data:
 ```
 
-------------------------------------------------------------------------
 
-## ▶️ Run Cassandra
+##  Run Cassandra
 
 ``` bash
 docker compose up -d
 ```
 
-------------------------------------------------------------------------
 
-## 🔌 Connect to Cassandra
+##  Connect to Cassandra
 
 ``` bash
 docker exec -it cassandra1 cqlsh
 ```
 
-------------------------------------------------------------------------
 
-## 🧪 Database Operations
+##  Database Operations
 
 ``` sql
 CREATE KEYSPACE testdb WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
@@ -87,9 +83,9 @@ INSERT INTO users (id, name, age) VALUES (uuid(), 'Ali', 30);
 SELECT * FROM users;
 ```
 
-------------------------------------------------------------------------
 
-## 🔍 Storage Engine Internals
+
+## Storage Engine Internals
 
 ### Commit Log
 
@@ -119,24 +115,20 @@ nodetool flush
 nodetool compact
 ```
 
-------------------------------------------------------------------------
 
-## 🔄 Data Flow
+##  Data Flow
 
 Write → Commit Log → MemTable → SSTable → Compaction
 
-------------------------------------------------------------------------
 
-## 🎯 Purpose
+##  Purpose
 
 -   High availability
 -   Fault tolerance
 -   Scalable storage
 -   Fast writes
 
-------------------------------------------------------------------------
 
-## 🏁 Conclusion
 
 This project demonstrates Cassandra deployment and internal working
 practically using Docker Compose.
